@@ -4,7 +4,16 @@ import Chart from "../../components/Chart06";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  const colors = { 男性: "blue", 女性: "red" };
+  return input.map(({ gender, x, y }) => {
+    return {
+      color: colors[gender],
+      gender,
+      weight: x,
+      height: y,
+      bmi: x / (y / 100) ** 2,
+    };
+  });
 };
 
 const Lesson = () => {
