@@ -5,7 +5,7 @@ import instruction from "./instruction.md";
 
 const convertData = (input) => {
   input.sort((a, b) => b.count - a.count);
-  return input.slice(0,20);// slizeを忘れていた。
+  return input.slice(0,20);// sliceを忘れていた。
   // ここを作りましょう！
 };
 
